@@ -62,11 +62,6 @@ nav a {
     border-color: #088C19;
 }
 
-nav a:hover {
-    color: #C78C19;
-    /*text-decoration: underline;*/
-}
-
 .produtos h2 {
     font-size: 30px;
     font-weight: bold;
@@ -252,23 +247,19 @@ footer {
 }
 
 .caixa ul li a::before {
-    content: attr(data-text);
-    position: absolute;
-    color: var(--clr);
-    /*color: black;*/
-    width: 0;
-    overflow: hidden;
-    transition: 1s;
-    border-right: 4px solid var(--clr);
-    -webkit-text-stroke: 1px var(--clr);
-    /*border-right: 8px solid black;
-    -webkit-text-stroke: 1px black;*/
+    content: attr(data-text);               /*Cria um conteudo (objeto) com a variavel data-text definida no HTML*/
+    position: absolute;                     /*Define a posicao dele como absoluta*/
+    color: var(--clr);                      /*Define a cor dele como da variavel --clr definida no HTML*/
+    width: 0;                               /*Define sua largura como 0 (para ficar invisivel)*/
+    overflow: hidden;                       /*Oculta o conteúdo que excede os limites do elemento*/
+    transition: 1s;                         /*Define uma transicao de 1 segundo*/
+    /*border-right: 4px solid var(--clr);*/ /*Define uma barra de 4px solida na cor da variavel --clr a direta do meu elemento*/
+    -webkit-text-stroke: 1px var(--clr);    /*Define uma borda de 1px na cor da variavel --clr em volta do meu conteudo (objeto) criado (Resumo: fica em negrito)*/
 }
 
-.caixa ul li a:hover::before {
-    width: var(--sz);
-    filter: drop-shadow(0 0 25px var(--clr));
-    /*filter: drop-shadow(0 0 25px Black);*/
+.caixa ul li a:hover::before {              /*Quando o mouse ficar sobre o elemento*/
+    width: var(--sz);                           /*Define sua largura como --sz definida no HTML para torna-lo visivel*/
+    filter: drop-shadow(0 0 25px var(--clr));   /*Define uma sombra em volta do conteudo (objeto) criado*/
 }
 
 @media screen and (max-width: 480px) {
